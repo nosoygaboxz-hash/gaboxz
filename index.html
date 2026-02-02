@@ -1,22 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="monito" type="png" href="monito.png">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-<style>
-  h1, h2, h3 {
-    font-family: 'Press Start 2P', cursive;
-    color: #00ff00;
-    text-shadow: 2px 2px #000;
-  }
-
-  .button {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 14px;
-  }
-</style>
   <meta charset="UTF-8">
-  <title> web de GABOXZTV </title>
+  <title>Web de GABOXZTV</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
   <style>
     body {
       background-color: #0b0b0b;
@@ -25,209 +14,110 @@
       margin: 0;
       padding: 0;
     }
+
     header {
       background-color: #1a1a1a;
       text-align: center;
       padding: 30px;
       border-bottom: 3px solid #00ff00;
     }
-    header h1 {
+
+    h1, h2 {
+      font-family: 'Press Start 2P', cursive;
       color: #00ff00;
-      font-size: 3em;
-      margin: 0;
+      text-shadow: 2px 2px #000;
     }
-    header p {
-      font-size: 1.2em;
-      color: #ffffff;
-    }
+
     section {
-      padding: 20px 50px;
+      padding: 20px 40px;
       border-bottom: 2px solid #333;
+      text-align: center;
     }
-    h2 {
-      color: #00aaff;
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.1em;
-      line-height: 1.6em;
-    }
+
     .button {
       display: inline-block;
       background-color: #00ff00;
       color: #000;
       padding: 12px 25px;
-      margin-top: 15px;
-      text-decoration: none;
-      font-weight: bold;
+      margin: 10px;
       border-radius: 5px;
-      transition: 0.3s;
+      font-family: 'Press Start 2P', cursive;
+      cursor: pointer;
+      border: none;
     }
+
     .button:hover {
       background-color: #00cc00;
     }
-    .card {
-      background-color: #1a1a1a;
-      border: 2px solid #00aaff;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 5px;
-    }
-    .links a {
-      color: #00ff00;
-      text-decoration: none;
-      margin-right: 15px;
-    }
-    .links a:hover {
-      color: #00cc00;
-    }
-    .qr {
-      margin-top: 15px;
+
+    /* SECCIONES OCULTAS */
+    .seccion {
+      display: none;
+      padding: 40px;
+      min-height: 70vh;
+      background-color: #111;
     }
   </style>
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header>
-    <h1>esta web esta inspirada en optijuegos </h1>
-    <p>en esta guia vas a encontrar como instalar los juegos igual no te preocupes sino te funciona el tuturial ya que en la pagian de opti tendras un tutorial de y es lo mismo que aqui</p>
+    <h1>Web inspirada en OptiJuegos</h1>
+    <p>Selecciona una categoría</p>
   </header>
 
+  <!-- BOTONES -->
   <section>
-    <h2>Inicio</h2>
-    <p>Bienvenido a mi pagina esta inpirada en optijuegos y todos las redes sociales estan aqui un poco mas abajo .</p>
+    <button class="button" onclick="mostrarSeccion('menos2gb')">
+      Juegos &lt; 2 GB
+    </button>
+
+    <button class="button" onclick="mostrarSeccion('menos4gb')">
+      Juegos &lt; 4 GB
+    </button>
+
+    <button class="button" onclick="mostrarSeccion('programas')">
+      Programas
+    </button>
   </section>
 
-  <section>
-    <h2>juegos con menos de 2gb</h2>
-  <button onclick="mostrarSeccion('juegosPequenos')" class="button">
-  Ver Juegos con menos de 2 GB
-</button>
-    </div>
-    <div class="card">
-      <h3>Paso 2: Windows y sistema</h3>
-      <p>Configura prioridad del juego, cierra programas pesados y activa alto rendimiento.</p>
-    </div>
-    <div class="card">
-      <h3>Paso 3: Drivers de video</h3>
-      <p>Actualiza tu tarjeta gráfica y ajusta para máximo rendimiento.</p>
-    </div>
-    <div class="card">
-      <h3>Optimización Real</h3>
-      <p>Más FPS, menos lag.</p>
-    </div>
-  </section>
+  <!-- SECCIÓN 1 -->
+  <div id="menos2gb" class="seccion">
+    <h2>Juegos con menos de 2 GB</h2>
 
-  <section>
-    <h2>Información Mía</h2>
-    <p>Aquí puedes poner información sobre mí, mis proyectos o cualquier cosa que quieras compartir. Esta sección es personal y opcional.</p>
-  </section>
+    <!-- AQUÍ PONES TUS JUEGOS -->
+    <!-- Ejemplo: -->
+    <!-- <p>Nombre del juego</p> -->
+  </div>
 
-  <section>
-    <h2>Recursos</h2>
-    <p>descarga archivo aqui.</p>
-    <!-- Botón MediaFire -->
-<a href="https://www.mediafire.com/file/kybq76zj8r8nu5i/GeometryDash_normal_un_poco_optimizado.apk/file class="button" target="_blank">MediaFire</a>
-<style>
-.button {
-  display: inline-block;
-  background-color: #00ff00;
-  color: #000;
-  padding: 12px 25px;
-  margin: 10px 0;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  font-family: 'Press Start 2P', cursive; /* estilo Minecraft si ya lo tienes */
-  transition: 0.3s;
-}
+  <!-- SECCIÓN 2 -->
+  <div id="menos4gb" class="seccion">
+    <h2>Juegos con menos de 4 GB</h2>
 
-.button:hover {
-  background-color: #00cc00;
-}
-</style>
-  </section>
+    <!-- AQUÍ PONES TUS JUEGOS -->
+  </div>
 
-  <section>
-    <h2>Links Importantes</h2>
-    <div class="links">
-      <a href="https://m.youtube.com/@OptiProjects" target="_blank">OptiJuegos YouTube</a>
-      <a href="https://optijuegos.net/" target="_blank">OptiJuegos Página</a>
-      <a href="https://kick.com/xzgabotv" target="_blank">Mi Kick</a>
-      <a href="https://m.youtube.com/channel/UCjJ9VysgKbUfJpMbbU7rMdQ" target="_blank">Mi YouTube</a>
-    </div>
-    <p>Esta página fue inspirada en OptiJuegos.</p>
-  </section>
+  <!-- SECCIÓN 3 -->
+  <div id="programas" class="seccion">
+    <h2>Programas</h2>
 
-  <section class="qr">
-    <h2>avatar</h2>
-    <p>mi avartar para que no te confundas con otros creadores :</p>
-    <img src="Avatar épico con espada pixelada.png" alt="Mi Logo" width="200">
-  </section>
-</body>
-  <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi página con monito</title>
-  <style>
-    /* Suaviza el movimiento del monito */
-    #monito {
-      position: fixed;
-      width: 80px;        /* tamaño del monito */
-      top: 0;
-      left: 0;
-      z-index: 9999;
-      transition: all 0.8s ease; /* movimiento suave */
-    }
-  </style>
-</head>
-<body>
-  </ul>
-</section>
-<!-- JavaScript al final del body -->
-<script>
-function mostrarSeccion(id) {
-  const secciones = document.querySelectorAll('.seccion');
-  secciones.forEach(s => s.style.display = 'none');
-  document.getElementById(id).style.display = 'block';
-}
-</script>
-</body>
-</html>
+    <!-- AQUÍ PONES TUS PROGRAMAS -->
+  </div>
 
-  <!-- Monito -->
-  <img src="monito.png" id="monito" alt="Monito">
-
+  <!-- SCRIPT (ABAJO DE TODO) -->
   <script>
-    const monito = document.getElementById('monito');
-
-    function moverMonito() {
-        const ancho = window.innerWidth - monito.offsetWidth;
-        const alto = window.innerHeight - monito.offsetHeight;
-
-        // Posición random en la pantalla
-        const x = Math.random() * ancho;
-        const y = Math.random() * alto;
-
-        monito.style.left = x + "px";
-        monito.style.top = y + "px";
+    function mostrarSeccion(id) {
+      const secciones = document.querySelectorAll('.seccion');
+      secciones.forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
     }
-
-    // Mueve el monito cada 2 segundos
-    setInterval(moverMonito, 2000);
   </script>
-function mostrarSeccion(id) {
 
-</script>
-</body><div id="menos2gb" class="seccion" style="display:none;">
-  <h2>Juegos con menos de 2 GB</h2>
-  <p>Aquí van los juegos livianos.</p>
-</div>
-  
+</body>
 </html>
-</html>
+
 
 
 
