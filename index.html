@@ -176,7 +176,54 @@
   </section>
 
 </body>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi página con monito</title>
+  <style>
+    /* Suaviza el movimiento del monito */
+    #monito {
+      position: fixed;
+      width: 80px;        /* tamaño del monito */
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      transition: all 0.8s ease; /* movimiento suave */
+    }
+  </style>
+</head>
+<body>
+  
+  <h1>Bienvenido a mi página de prueba</h1>
+  <p>Aquí puedes poner tu contenido normal...</p>
+
+  <!-- Monito -->
+  <img src="monito.png" id="monito" alt="Monito">
+
+  <script>
+    const monito = document.getElementById('monito');
+
+    function moverMonito() {
+        const ancho = window.innerWidth - monito.offsetWidth;
+        const alto = window.innerHeight - monito.offsetHeight;
+
+        // Posición random en la pantalla
+        const x = Math.random() * ancho;
+        const y = Math.random() * alto;
+
+        monito.style.left = x + "px";
+        monito.style.top = y + "px";
+    }
+
+    // Mueve el monito cada 2 segundos
+    setInterval(moverMonito, 2000);
+  </script>
+</body>
 </html>
+</html>
+
 
 
 
