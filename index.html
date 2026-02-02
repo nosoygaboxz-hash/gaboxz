@@ -98,10 +98,10 @@
   </section>
 
   <section>
-    <h2>Optimización</h2>
-    <div class="card">
-      <h3>Paso 1: Configuración del juego</h3>
-      <p>Ajusta resolución, calidad de gráficos y FPS para mejorar rendimiento.</p>
+    <h2>juegos con menos de 2gb</h2>
+  <button onclick="mostrarSeccion('juegosPequenos')" class="button">
+  Ver Juegos con menos de 2 GB
+</button>
     </div>
     <div class="card">
       <h3>Paso 2: Windows y sistema</h3>
@@ -194,6 +194,38 @@
   </style>
 </head>
 <body>
+<!-- Última sección visible que tengas -->
+<section>
+  <h2>Checklist rápido</h2>
+  <ul>
+    <li>Configuración interna del juego</li>
+    <li>Prioridad y programas de Windows</li>
+    <li>Drivers actualizados</li>
+    <li>Probar FPS y ajustar gráficos</li>
+  </ul>
+</section>
+
+<!-- Aquí pones la sección oculta -->
+<div id="juegosPequenos" class="seccion" style="display:none;">
+  <h2>Juegos con menos de 2 GB</h2>
+  <p>Aquí puedes poner los juegos que pesen poco:</p>
+  <ul>
+    <li>Juego 1 – 1.8 GB</li>
+    <li>Juego 2 – 1.2 GB</li>
+    <li>Juego 3 – 1.9 GB</li>
+  </ul>
+</div>
+
+<!-- JavaScript al final del body -->
+<script>
+function mostrarSeccion(id) {
+  const secciones = document.querySelectorAll('.seccion');
+  secciones.forEach(s => s.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+</script>
+</body>
+</html>
   
   <h1>Bienvenido a mi página de prueba</h1>
   <p>Aquí puedes poner tu contenido normal...</p>
@@ -219,9 +251,20 @@
     // Mueve el monito cada 2 segundos
     setInterval(moverMonito, 2000);
   </script>
+function mostrarSeccion(id) {
+  // Oculta todas las secciones
+  const secciones = document.querySelectorAll('.seccion');
+  secciones.forEach(s => s.style.display = 'none');
+
+  // Muestra solo la sección que toque el usuario
+  document.getElementById(id).style.display = 'block';
+}
+</script>
 </body>
+  
 </html>
 </html>
+
 
 
 
